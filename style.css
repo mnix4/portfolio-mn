@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Cabin", sans-serif;
+  background: linear-gradient(
+    -15deg,
+    rgba(245, 245, 245, 0.6) 0%,
+    rgba(207, 255, 231, 0.6) 18%,
+    rgba(167, 197, 235, 0.6) 60%,
+    rgba(207, 255, 231, 0.6) 100%
+  );
+  color: #333;
+}
+
+h2 {
+  font-size: 52px;
+  margin-bottom: 50px;
+  color: #a259ff;
+}
+
+section {
+  padding: 160px 120px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 120px;
+  font-size: 26px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 48px;
+  color: #a259ff;
+}
+
+.hamburger {
+  display: none;
+  font-size: 34px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 52px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333333;
+  transition: color 0.2s ease-out;
+  font-size: 24px;
+}
+
+.nav-links a:hover {
+  color: #a259ff;
+}
+
+#hero {
+  text-align: center;
+  padding: 220px 120px;
+}
+
+#hero h1 {
+  font-size: 70px;
+  color: #a259ff;
+  margin-bottom: 36px;
+}
+
+#hero p {
+  font-size: 32px;
+  margin-bottom: 50px;
+  color: #333333;
+}
+
+.btn {
+  display: inline-block;
+  padding: 18px 36px;
+  border: 2px solid #a259ff;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 22px;
+  color: #333333;
+  transition: all 0.2s ease-out;
+}
+
+.btn:hover {
+  background-color: #a259ff;
+  color: white;
+}
+
+#about {
+  text-align: center;
+}
+
+#about p {
+  font-size: 24px;
+  max-width: 720px;
+  margin: 0 auto 50px auto;
+  line-height: 1.8;
+}
+
+.skills {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-bottom: 60px;
+}
+
+.skills img {
+  width: 72px;
+  height: 72px;
+}
+
+#portfolio {
+  text-align: center;
+  perspective: 1000px;
+}
+
+.card {
+  border-radius: 20px;
+  padding: 64px;
+  margin-bottom: 80px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.card-1,
+.card-2 {
+  background: linear-gradient(
+    120deg,
+    rgba(207, 245, 231, 0.6) 25%,
+    rgba(207, 245, 231, 0.6) 55%,
+    rgba(167, 197, 235, 0.15) 75%
+  );
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+}
+
+.card h3 {
+  font-size: 32px;
+  margin-bottom: 32px;
+}
+
+.card p {
+  font-size: 22px;
+  margin-bottom: 32px;
+  line-height: 1.7;
+}
+
+#contact {
+  text-align: center;
+  padding: 160px 120px;
+}
+
+#contact h2 {
+  margin-bottom: 36px;
+}
+
+#contact a {
+  color: #333333;
+  text-decoration: none;
+  font-size: 24px;
+  transition: color 0.2s ease-out;
+  display: inline-block;
+  margin-bottom: 24px;
+}
+
+#contact a:hover {
+  color: #a259ff;
+}
+
+#contact p {
+  font-size: 20px;
+  margin-top: 12px;
+  margin-bottom: 50px;
+}
+
+footer {
+  text-align: center;
+  padding: 100px 40px;
+  color: #a259ff;
+}
+
+footer p {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(40px) scale(0.98);
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+@media (max-width: 600px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: rgba(245, 245, 245, 0.95);
+    position: absolute;
+    top: 80px;
+    right: 24px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    font-size: 22px;
+  }
+
+  .logo {
+    font-size: 36px;
+  }
+
+  .skills img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .card {
+    padding: 36px;
+  }
+
+  .card h3 {
+    font-size: 24px;
+  }
+
+  .card p {
+    font-size: 18px;
+  }
+
+  footer p {
+    font-size: 28px;
+  }
+}

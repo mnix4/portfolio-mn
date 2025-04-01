@@ -1,3 +1,4 @@
+/* === RESET === */
 * {
   margin: 0;
   padding: 0;
@@ -16,33 +17,53 @@ body {
   color: #333;
 }
 
-h2 {
-  font-size: 52px;
-  margin-bottom: 50px;
+/* === TYPOGRAPHY === */
+
+h1 {
+  font-size: 80px;
   color: #a259ff;
+  margin-bottom: 36px;
 }
 
-section {
-  padding: 160px 120px;
+h2 {
+  font-size: 56px;
+  color: #a259ff;
+  margin-bottom: 50px;
 }
 
+h3 {
+  font-size: 36px;
+  margin-bottom: 24px;
+}
+
+p {
+  font-size: 24px;
+  line-height: 1.8;
+}
+
+/* === NAVIGATION === */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 60px 120px;
-  font-size: 26px;
+  font-size: 28px;
 }
 
 .logo {
   font-weight: bold;
-  font-size: 48px;
+  font-size: 52px;
+  color: #a259ff;
+}
+
+.logo a {
+  text-decoration: none;
   color: #a259ff;
 }
 
 .hamburger {
   display: none;
-  font-size: 34px;
+  font-size: 36px;
   cursor: pointer;
   user-select: none;
 }
@@ -50,45 +71,40 @@ nav {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 52px;
+  gap: 56px;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: #333333;
+  color: #333;
   transition: color 0.2s ease-out;
-  font-size: 24px;
+  font-size: 26px;
 }
 
 .nav-links a:hover {
   color: #a259ff;
 }
 
+/* === HERO === */
 #hero {
   text-align: center;
-  padding: 220px 120px;
-}
-
-#hero h1 {
-  font-size: 70px;
-  color: #a259ff;
-  margin-bottom: 36px;
+  padding: 240px 120px;
 }
 
 #hero p {
   font-size: 32px;
   margin-bottom: 50px;
-  color: #333333;
+  color: #333;
 }
 
 .btn {
   display: inline-block;
-  padding: 18px 36px;
+  padding: 20px 40px;
   border: 2px solid #a259ff;
   border-radius: 12px;
   text-decoration: none;
-  font-size: 22px;
-  color: #333333;
+  font-size: 24px;
+  color: #333;
   transition: all 0.2s ease-out;
 }
 
@@ -97,15 +113,15 @@ nav {
   color: white;
 }
 
+/* === ABOUT === */
 #about {
   text-align: center;
+  padding: 180px 120px;
 }
 
 #about p {
-  font-size: 24px;
-  max-width: 720px;
+  max-width: 800px;
   margin: 0 auto 50px auto;
-  line-height: 1.8;
 }
 
 .skills {
@@ -120,13 +136,15 @@ nav {
   height: 72px;
 }
 
+/* === PORTFOLIO === */
 #portfolio {
   text-align: center;
   perspective: 1000px;
+  padding: 180px 120px;
 }
 
 .card {
-  border-radius: 20px;
+  border-radius: 24px;
   padding: 64px;
   margin-bottom: 80px;
   max-width: 800px;
@@ -152,28 +170,52 @@ nav {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
 }
 
-.card h3 {
+/* === DETAIL PAGE === */
+.project-detail {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 120px 20px;
+}
+
+.project-detail h1 {
+  font-size: 64px;
+  margin-bottom: 30px;
+}
+
+.project-detail .project-description {
+  font-size: 24px;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.project-detail h2 {
   font-size: 32px;
-  margin-bottom: 32px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #333;
 }
 
-.card p {
+.project-detail ul {
+  list-style: disc;
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+.project-detail ul li {
+  margin-bottom: 14px;
   font-size: 22px;
-  margin-bottom: 32px;
-  line-height: 1.7;
 }
 
+/* === CONTACT === */
 #contact {
   text-align: center;
-  padding: 160px 120px;
-}
-
-#contact h2 {
-  margin-bottom: 36px;
+  padding: 180px 120px;
 }
 
 #contact a {
-  color: #333333;
+  color: #333;
   text-decoration: none;
   font-size: 24px;
   transition: color 0.2s ease-out;
@@ -191,6 +233,7 @@ nav {
   margin-bottom: 50px;
 }
 
+/* === FOOTER === */
 footer {
   text-align: center;
   padding: 100px 40px;
@@ -202,6 +245,7 @@ footer p {
   font-weight: bold;
 }
 
+/* === MOTION === */
 .hidden {
   opacity: 0;
   transform: translateY(40px) scale(0.98);
@@ -213,6 +257,7 @@ footer p {
   transform: translateY(0) scale(1);
 }
 
+/* === RESPONSIVE === */
 @media (max-width: 600px) {
   .hamburger {
     display: block;
@@ -252,7 +297,7 @@ footer p {
   }
 
   .card h3 {
-    font-size: 24px;
+    font-size: 26px;
   }
 
   .card p {
@@ -262,4 +307,7 @@ footer p {
   footer p {
     font-size: 28px;
   }
+}
+.card .btn {
+  margin-top: 32px; /* přidej větší mezeru nad tlačítkem */
 }
